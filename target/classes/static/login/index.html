@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="../sources/styles/login.css">
+    <script type="importmap">
+        {
+          "imports": {
+            "@material/web/": "https://esm.run/@material/web/"
+          }
+        }
+    </script>
+    <script type="module">
+        import '@material/web/all.js';
+        import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
+
+        document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+    </script>
+</head>
+<body>
+<div id="login_div">
+    <div id="logo">
+        <img src="../sources/images/icon.png" alt="AMSM Logo">
+        <h1 id="title">Aerial Minecraft Server Manager</h1>
+    </div>
+    <div id="description">
+        <h1>登录</h1>
+        <p>在完成身份验证之前，您无法使用面板的任何功能</p>
+    </div>
+    <form action="/verify" id="input_area">
+        <md-outlined-text-field name="username" label="用户名" required></md-outlined-text-field>
+        <md-outlined-text-field name="password" label="密码" type="password"></md-outlined-text-field>
+        <md-filled-button type="submit">登录</md-filled-button>
+    </form>
+</div>
+</body>
+
+<script src="../sources/scripts/login.js"></script>
+</html>

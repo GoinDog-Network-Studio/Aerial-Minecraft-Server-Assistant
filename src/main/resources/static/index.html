@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> - Aerial Minecraft Server Manager</title>
+    <link rel="shortcut icon" href="/sources/images/icon.png">
+    <link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css">
+    <link rel="stylesheet" href="/sources/styles/index.css">
+    <script src="https://unpkg.com/mdui@2/mdui.global.js"></script>
+    <script type="importmap">
+        {
+          "imports": {
+            "@material/web/": "https://esm.run/@material/web/"
+          }
+        }
+    </script>
+    <script type="module">
+        import '@material/web/all.js';
+        import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
+
+        document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+    </script>
+    <!-- Filled -->
+    <link href="https://fonts.googleapis.cn/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Outlined -->
+    <link href="https://fonts.googleapis.cn/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Rounded -->
+    <link href="https://fonts.googleapis.cn/icon?family=Material+Icons+Round" rel="stylesheet">
+
+    <!-- Sharp -->
+    <link href="https://fonts.googleapis.cn/icon?family=Material+Icons+Sharp" rel="stylesheet">
+
+    <!-- Two Tone -->
+    <link href="https://fonts.googleapis.cn/icon?family=Material+Icons+Two+Tone" rel="stylesheet">
+</head>
+<body>
+<mdui-top-app-bar>
+    <md-outlined-text-field placeholder="Search for messages">
+        <md-icon slot="leading-icon">search</md-icon>
+    </md-outlined-text-field>
+</mdui-top-app-bar>
+<mdui-navigation-rail value="dashboard">
+    <mdui-navigation-rail-item value="dashboard" icon="dashboard--outlined">仪表盘</mdui-navigation-rail-item>
+</mdui-navigation-rail>
+<div class="page" id="dashboard">
+    <h1 class="page_title">仪表盘</h1>
+    <div class="page_part">
+        <h1 class="page_part_title">设备运行状态</h1>
+        <div class="page_part_content">
+            <div id="cpu_status">
+                <div class="status_progress">
+                    <md-circular-progress value="1" id="progress_track"></md-circular-progress>
+                    <md-circular-progress value="0" id="cpu_status_track"></md-circular-progress>
+                    <mdui-icon name="memory"></mdui-icon>
+                </div>
+                <div class="content">
+                    <h1 class="content_value" id="cpu_acaliable">0%</h1>
+                    <p class="content_description">CPU占用率</p>
+                    <md-divider inset></md-divider>
+                    <p class="content_sub_description" id="cpu_total">CPU总核数：</p>
+                </div>
+            </div>
+            <div id="memory_status">
+                <div class="status_progress">
+                    <md-circular-progress value="1" id="progress_track"></md-circular-progress>
+                    <md-circular-progress value="0" id="memory_status_track"></md-circular-progress>
+                    <mdui-icon name="memory"></mdui-icon>
+                </div>
+                <div class="content">
+                    <h1 class="content_value" id="memory_acaliable">0%</h1>
+                    <p class="content_description">内存占用率</p>
+                    <md-divider inset></md-divider>
+                    <p class="content_sub_description" id="memory_total">内存总空间：</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page" id="boxes"></div>
+<div class="page" id="users"></div>
+<div class="page" id="manager_settings"></div>
+</body>
+<script src="/sources/scripts/index.js"></script>
+</html>

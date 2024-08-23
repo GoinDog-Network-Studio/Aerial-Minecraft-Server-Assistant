@@ -1,0 +1,89 @@
+@font-face {
+    font-family: ProductSans;
+    src: url("../fonts/ProductSans-Regular.ttf");
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+.page {
+    margin: 15px 0 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.page .page_title {
+    padding: 0;
+    margin: 0;
+}
+#progress_track {
+    --md-sys-color-primary: lightgrey;
+}
+.status_progress md-circular-progress {
+    --md-circular-progress-size: 117.6px;
+    position: absolute;
+}
+
+.page_part {
+    width: 517.6px;
+}
+.page_part .page_part_content {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 15px;
+}
+.page_part .page_part_content #cpu_status {
+    display: flex;
+    flex-direction: row;
+}
+.page_part .page_part_content #cpu_status .status_progress {
+    width: 117.6px;
+    height: 117.6px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.page_part .page_part_content #cpu_status .content {
+    position: relative;
+    left: 10px;
+    width: 300px;
+}
+.page_part .page_part_content #cpu_status .content .content_value {
+    margin: 0;
+    font-size: 45px;
+}
+.page_part .page_part_content #cpu_status .content p {
+    margin: 5px;
+}
+.page_part .page_part_content #cpu_status .content .content_sub_description {
+    color: grey;
+}
+.page_part .page_part_content #memory_status {
+    display: flex;
+    flex-direction: row;
+}
+.page_part .page_part_content #memory_status .status_progress {
+    width: 117.6px;
+    height: 117.6px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.page_part .page_part_content #memory_status .content {
+    position: relative;
+    left: 10px;
+    width: 300px;
+}
+.page_part .page_part_content #memory_status .content .content_value {
+    margin: 0;
+    font-size: 45px;
+}
+.page_part .page_part_content #memory_status .content p {
+    margin: 5px;
+}
+.page_part .page_part_content #memory_status .content .content_sub_description {
+    color: grey;
+}
